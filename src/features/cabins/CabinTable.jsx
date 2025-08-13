@@ -38,14 +38,14 @@ function CabinTable() {
     // error,
   } = useQuery({
     //Key para identificar de manera unica o si cambio el state relacionado a esta key
-    queryKey: ["cabin"],
+    queryKey: ["cabins"],
     //propiedad asincrona donde se hace el fetch o bien se almacena la funcion que hara fetch
     //retorna una promesa, dentro de la data que retorna ya lleva los loading entre otros estados
     queryFn: getCabins,
   });
 
   if (isLoading) return <Spinner />;
-  console.log(cabins);
+
   return (
     <Table role="table">
       <TableHeader role="row">
